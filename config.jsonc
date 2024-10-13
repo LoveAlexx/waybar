@@ -1,0 +1,64 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 4,
+
+  "modules-left":[
+    "sway/workspaces",
+  ],
+  "modules-center":[
+    "clock"
+  ],
+  "modules-right":[
+    "battery",
+    "network",
+    "pulseaudio",
+    "backlight",
+  ],
+  "clock": { 
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "battery": {
+    "format": "{capacity}% {icon}  ",
+    "format": "{capacity}% {icon}  ",
+    "format-full": "{capacity}% {icon}  ",
+    "format-charging": "{capacity}%   " ,
+    "format-plugged": "{capacity}%   ",
+    "format-alt": "{time} {icon}  ",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format-wifi": "{essid}   ",
+    "format-ethernet": "{ipaddr}/{cidr}  ",
+    "tooltip-format": "{ifname} via {gwaddr}  ",
+    "format-linked": "{ifname} (No IP)  ",
+    "format-disconnected": "Disconnected ⚠ ",
+    "format-alt": "{essid} ({signalStrength}%)"
+  },
+  "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}   {format_source}",
+        "format-bluetooth": "{volume}% {icon}   {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": "{volume}%  ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", "  "]
+        },
+        "on-click": "pavucontrol" 
+  },
+  "backlight": {
+      // "device": "acpi_video1",
+      "format": "{percent}% {icon} ",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+}
